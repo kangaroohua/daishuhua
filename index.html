@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>袋鼠花</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.slim.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdn.staticfile.org/underscore.js/1.9.1/underscore-min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .nav-box .nav {
+            background: #405295;
+        }
+
+        .nav-box .nav .nav-link {
+            color: white;
+        }
+
+        #carouselIndicators .carousel-indicators {
+            margin-bottom: 0.2rem;
+        }
+
+        .tab-box {
+            background-color: white;
+        }
+
+        .tab-box div div.a-tab:nth-of-type(1) {
+            background-image: linear-gradient(135deg, #FEC163 10%, #DE4313 100%);
+            margin-right: 0.2rem;
+            padding: 0.2rem 0;
+        }
+
+        .tab-box div div.a-tab:nth-last-of-type(1) {
+            background-image: linear-gradient(135deg, #52E5E7 10%, #130CB7 100%);
+            margin-left: 0.2rem;
+            padding: 0.2rem 0;
+        }
+
+        .tab-box .a-tab h6 {
+            color: white;
+            font-size: 1rem;
+        }
+
+        .tab-box .a-tab p {
+            color: white;
+            font-size: 0.6rem;
+        }
+
+        .list-box {
+            background-color: white;
+        }
+
+        .list-box .nav {
+            background-color: white;
+            border-bottom: 1px solid #dddddd;
+            margin-bottom: 1px;
+        }
+
+        .list-box .nav .nav-item .nav-link {
+            color: #333;
+        }
+
+        .list-box .list-group .list-group-item {
+            padding: 0 0.2rem;
+            border: 0px;
+            border-bottom: 1px solid #dddddd;
+            margin-bottom: 1px;
+        }
+
+        .list-box .list-group .list-group-item img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .list-box .list-group .le h6 {
+            font-size: 0.8rem;
+            color: #333;
+        }
+
+        .list-box .list-group .le p {
+            font-size: 0.3rem;
+            color: #444;
+        }
+
+        .list-box .list-group .le p span {
+            font-size: 0.3rem;
+            color: #999;
+        }
+
+        .list-box .list-group .ri p {
+            font-size: 0.3rem;
+            color: deepskyblue;
+        }
+
+        .list-box .list-group .ri .btn {
+            padding: 0.2rem 0.5rem;
+            font-size: 0.5rem;
+            background: #10bcf9;
+            border: 0px;
+            color: white;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="nav-box">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">袋鼠花</a>
+            </li>
+        </ul>
+    </div>
+    <div class="banner-box">
+        <div id="carouselIndicators" class="carousel slide" data-ride="carousel" data-interval="5000">
+            <ol class="carousel-indicators">
+
+            </ol>
+            <div class="carousel-inner">
+
+            </div>
+        </div>
+    </div>
+    <div class="tab-box p-2">
+        <div class="d-flex flex-row">
+        </div>
+    </div>
+    <div class="list-box mt-2">
+        <ul class="nav justify-content-between">
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">热门贷款</a>
+            </li>
+        </ul>
+        <ul class="list-group px-2">
+        </ul>
+    </div>
+
+    <script>
+        const banners = [
+            { title: "abc", sub: "def", img: "https://img.jidaihome.com/loan/img/40d09c92-cff7-4ef0-9f21-1aeb5396fab8.jpg" },
+            { title: "123", sub: "456", img: "https://img.jidaihome.com/loan/img/0668217b-8308-4c79-8f4a-05cb99139dbc.jpg" },
+            { title: "ret", sub: "cxv", img: "https://img.jidaihome.com/loan/img/b0f797ac-5c01-4583-978e-55f920a14d18.png" }
+        ];
+        const tabs = [
+            { title: "一键贷款", sub: "信贷经理来找您", url: 'https://www.baidu.com' },
+            { title: "闪电办卡", sub: "额度高 下款快", url: 'https://www.baidu.com' },
+        ];
+        const items = [
+            {
+                name: '玖富万卡',
+                img: 'https://img.jidaihome.com/loan/img/6e9c9c58-9fbf-4d05-95d4-dd999d6236a3.png',
+                time: '1个月-12个月',
+                range: '500元-200,000元',
+                rate: '0.02%/日'
+            },
+            {
+                name: '花花购',
+                img: 'https://img.jidaihome.com/loan/img/73fbcab0-c0f2-4b24-8999-fa7439f75786.png',
+                time: '7天-36个月',
+                range: '1,000元-100,000元',
+                rate: '0.03%/日'
+            },
+            {
+                name: '熊猫贷款',
+                img: 'https://img.jidaihome.com/loan/img/75f54316-89bd-4738-bc39-d6ef7ed62d73.png',
+                time: '7天-180天',
+                range: '500元-500,000元',
+                rate: '0.03%/日'
+            },
+            {
+                name: '点点（极速）',
+                img: 'https://img.jidaihome.com/loan/img/a686d9fd-0140-47df-a6ff-ab5c24e031e4.png',
+                time: '7天-365天',
+                range: '1,000元-200,000元',
+                rate: '0.02%/日'
+            },
+            {
+                name: '智慧钱包',
+                img: 'https://img.jidaihome.com/loan/img/c958249e-1bce-4c59-a356-7a1a2681afc0.png',
+                time: '1天-7天',
+                range: '1,000元-50,000元',
+                rate: '0.03%/日'
+            },
+            {
+                name: '去哪借',
+                img: 'https://img.jidaihome.com/loan/img/62226d56-7b66-4f8a-bf17-7401c65d8004.png',
+                time: '7天-36个月',
+                range: '1,000元-200,000元',
+                rate: '0.03%/日'
+            },
+            {
+                name: '小赢卡贷',
+                img: 'https://img.jidaihome.com/loan/img/15bfff56-7eba-4f61-b4dc-7b0f8ce83752.png',
+                time: '3个月-12个月',
+                range: '2,000元-60,000元',
+                rate: '0.83%/月'
+            },
+            {
+                name: '老哥帮',
+                img: 'https://img.jidaihome.com/loan/img/7226aef2-afd5-43d5-ae36-d69136d30e70.png',
+                time: '7天-21天',
+                range: '500元-50,000元',
+                rate: '0.03%/日'
+            },
+            {
+                name: '智慧钱包',
+                img: 'https://img.jidaihome.com/loan/img/c958249e-1bce-4c59-a356-7a1a2681afc0.png',
+                time: '1天-7天',
+                range: '1,000元-50,000元',
+                rate: '0.03%/日'
+            },
+            {
+                name: '极秒贷',
+                img: 'https://img.jidaihome.com/loan/img/768a0e7c-3f3f-471d-91dc-c0fe27558135.png',
+                time: '7天-365天',
+                range: '1,500元-20,000元',
+                rate: '0.03%/日'
+            },
+            {
+                name: '火龙贷',
+                img: 'https://img.jidaihome.com/loan/img/9a53de4a-8775-4dd6-8500-1894939eada0.png',
+                time: '7天-3年',
+                range: '1,000元-30,000元',
+                rate: '0.02%/日'
+            },
+            {
+                name: '小白易贷（极速）',
+                img: 'https://img.jidaihome.com/loan/img/efc66f29-cba8-486e-a7a4-6194c4257f79.png',
+                time: '7天-365天',
+                range: '1,500元-20,000元',
+                rate: '0.03%/日'
+            },
+            {
+                name: '侬要贷',
+                img: 'https://img.jidaihome.com/loan/img/8df87484-da74-4e06-b8f0-57c5e6144813.png',
+                time: '7天-16天',
+                range: '1,000元-20,000元',
+                rate: '0.10%/日'
+            },
+            {
+                name: '58钱包',
+                img: 'https://img.jidaihome.com/loan/img/c62c08e4-98a2-4890-83dd-129893dd9114.png',
+                time: '7天-14天',
+                range: '1,000元-5,000元',
+                rate: '0.02%/日'
+            }
+        ];
+        $('#carouselIndicators > .carousel-indicators').append(_.template(`<%_.forEach(items, function (u,i) {%>
+            <li data-target="#carouselIndicators" data-slide-to="<%=i%>" <%if (i == 0) {%>class="active"<%}%>></li>
+        <%})%>`)({ items: banners }));
+        $('#carouselIndicators > .carousel-inner').append(_.template(`<%_.forEach(items, function (u,i) {%>
+            <div class="carousel-item <%if (i == 0) {%>active<%}%>">
+                <img class="d-block w-100" src="<%=u.img %>">
+                <!--div class="carousel-caption d-none d-md-block">
+                    <h5 class="m-0 p-0"><%=u.title %></h5>
+                    <p class="m-0 p-0"><%=u.sub %></p>
+                </div -->
+            </div>
+        <%})%>`)({ items: banners }));
+
+        $('.tab-box div').append(_.template(`<%_.forEach(items, function (u,i) {%>
+            <div class="a-tab d-flex flex-grow-1">
+                <a class="w-100" href="<%=u.url %>">
+                    <div class="p-2 d-flex flex-column justify-content-center align-items-center">
+                        <h6 class="m-0 p-0"><%=u.title %></h6>
+                        <p class="m-0 p-0"><%=u.sub %></p>
+                    </div>
+                </a>
+            </div>
+        <%})%>`)({ items: tabs }));
+        $('.list-box > .list-group').append(_.template(`<%_.forEach(items, function (u,i) {%>
+            <li class="list-group-item">
+                <div class="d-flex flex-row">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <img src="<%=u.img %>" alt="..." class="img-thumbnail">
+                    </div>
+                    <div class="le p-1 flex-column flex-grow-1 justify-content-between">
+                        <h6 class="m-0 p-0"><%=u.name %></h6>
+                        <p class="m-0 p-0"><span>还款期限: </span><%=u.time %></p>
+                        <p class="m-0 p-0"><span>可借额度: </span><%=u.range %></p>
+                    </div>
+                    <div class="ri py-1 d-flex flex-column justify-content-between">
+                        <p class="m-0 p-0">利率: <%=u.rate %></p>
+                        <a class="btn btn-primary btn-sm" href="<%=u.url %>">立即申请</a>
+                    </div>
+                </div>
+            </li>
+        <%})%>`)({ items }));
+    </script>
+</body>
+
+</html>
