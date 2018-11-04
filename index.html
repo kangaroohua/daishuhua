@@ -146,112 +146,68 @@
 
     <script>
         const banners = [
-            { title: "abc", sub: "def", img: "https://img.jidaihome.com/loan/img/40d09c92-cff7-4ef0-9f21-1aeb5396fab8.jpg" },
-            { title: "123", sub: "456", img: "https://img.jidaihome.com/loan/img/0668217b-8308-4c79-8f4a-05cb99139dbc.jpg" },
-            { title: "ret", sub: "cxv", img: "https://img.jidaihome.com/loan/img/b0f797ac-5c01-4583-978e-55f920a14d18.png" }
+            { 
+                title: "巨象速贷", 
+                sub: "def", 
+                img: "https://img.jidaihome.com/loan/img/40d09c92-cff7-4ef0-9f21-1aeb5396fab8.jpg",
+                url: 'http://jxsd.qqyzk.top/dxjk_reg.ssj?merchantId=1198'
+                },
+            { 
+                title: "薪融易贷",
+                sub: "456", 
+                img: "https://img.jidaihome.com/loan/img/0668217b-8308-4c79-8f4a-05cb99139dbc.jpg",
+                url: 'https://xrong.geziqianbao.com/xrong/inborrow/redirectindex?cid=268474763#&/xrong/passport/register?cid=268474763'
+            },
+            { 
+                title: "白熊钱包", 
+                sub: "cxv", 
+                img: "https://img.jidaihome.com/loan/img/b0f797ac-5c01-4583-978e-55f920a14d18.png",
+                url: 'http://baixiong.register.chanmir.com/bear/index.aspx?type=1&code=d2Vpa2UwMDQ=&member_id=21'
+            }
         ];
         const tabs = [
-            { title: "一键贷款", sub: "信贷经理来找您", url: 'https://www.baidu.com' },
-            { title: "闪电办卡", sub: "额度高 下款快", url: 'https://www.baidu.com' },
+            { 
+                title: "一键贷款", 
+                sub: "信贷经理来找您", 
+                url: 'https://www.baidu.com' },
+            { 
+                title: "闪电办卡", 
+                sub: "额度高 下款快", 
+                url: 'https://www.baidu.com'
+            },
         ];
         const items = [
             {
-                name: '玖富万卡',
+                name: '巨象速贷',
                 img: 'https://img.jidaihome.com/loan/img/6e9c9c58-9fbf-4d05-95d4-dd999d6236a3.png',
                 time: '1个月-12个月',
                 range: '500元-200,000元',
-                rate: '0.02%/日'
+                rate: '0.02%/日',
+                url: 'http://jxsd.qqyzk.top/dxjk_reg.ssj?merchantId=1198'
             },
             {
-                name: '花花购',
+                name: '薪融易贷',
                 img: 'https://img.jidaihome.com/loan/img/73fbcab0-c0f2-4b24-8999-fa7439f75786.png',
                 time: '7天-36个月',
                 range: '1,000元-100,000元',
-                rate: '0.03%/日'
+                rate: '0.03%/日',
+                url: 'https://xrong.geziqianbao.com/xrong/inborrow/redirectindex?cid=268474763#&/xrong/passport/register?cid=268474763'
             },
             {
-                name: '熊猫贷款',
+                name: '白熊钱包',
                 img: 'https://img.jidaihome.com/loan/img/75f54316-89bd-4738-bc39-d6ef7ed62d73.png',
                 time: '7天-180天',
                 range: '500元-500,000元',
-                rate: '0.03%/日'
+                rate: '0.03%/日',
+                url: 'http://baixiong.register.chanmir.com/bear/index.aspx?type=1&code=d2Vpa2UwMDQ=&member_id=21'
             },
             {
-                name: '点点（极速）',
-                img: 'https://img.jidaihome.com/loan/img/a686d9fd-0140-47df-a6ff-ab5c24e031e4.png',
+                name: '小兔借钱',
+                img: 'https://xinkouzi.oss-cn-shanghai.aliyuncs.com/12b006b0-de86-11e8-afc1-39318a352313.jpg?x-oss-process=image/resize,w_300',
                 time: '7天-365天',
                 range: '1,000元-200,000元',
-                rate: '0.02%/日'
-            },
-            {
-                name: '智慧钱包',
-                img: 'https://img.jidaihome.com/loan/img/c958249e-1bce-4c59-a356-7a1a2681afc0.png',
-                time: '1天-7天',
-                range: '1,000元-50,000元',
-                rate: '0.03%/日'
-            },
-            {
-                name: '去哪借',
-                img: 'https://img.jidaihome.com/loan/img/62226d56-7b66-4f8a-bf17-7401c65d8004.png',
-                time: '7天-36个月',
-                range: '1,000元-200,000元',
-                rate: '0.03%/日'
-            },
-            {
-                name: '小赢卡贷',
-                img: 'https://img.jidaihome.com/loan/img/15bfff56-7eba-4f61-b4dc-7b0f8ce83752.png',
-                time: '3个月-12个月',
-                range: '2,000元-60,000元',
-                rate: '0.83%/月'
-            },
-            {
-                name: '老哥帮',
-                img: 'https://img.jidaihome.com/loan/img/7226aef2-afd5-43d5-ae36-d69136d30e70.png',
-                time: '7天-21天',
-                range: '500元-50,000元',
-                rate: '0.03%/日'
-            },
-            {
-                name: '智慧钱包',
-                img: 'https://img.jidaihome.com/loan/img/c958249e-1bce-4c59-a356-7a1a2681afc0.png',
-                time: '1天-7天',
-                range: '1,000元-50,000元',
-                rate: '0.03%/日'
-            },
-            {
-                name: '极秒贷',
-                img: 'https://img.jidaihome.com/loan/img/768a0e7c-3f3f-471d-91dc-c0fe27558135.png',
-                time: '7天-365天',
-                range: '1,500元-20,000元',
-                rate: '0.03%/日'
-            },
-            {
-                name: '火龙贷',
-                img: 'https://img.jidaihome.com/loan/img/9a53de4a-8775-4dd6-8500-1894939eada0.png',
-                time: '7天-3年',
-                range: '1,000元-30,000元',
-                rate: '0.02%/日'
-            },
-            {
-                name: '小白易贷（极速）',
-                img: 'https://img.jidaihome.com/loan/img/efc66f29-cba8-486e-a7a4-6194c4257f79.png',
-                time: '7天-365天',
-                range: '1,500元-20,000元',
-                rate: '0.03%/日'
-            },
-            {
-                name: '侬要贷',
-                img: 'https://img.jidaihome.com/loan/img/8df87484-da74-4e06-b8f0-57c5e6144813.png',
-                time: '7天-16天',
-                range: '1,000元-20,000元',
-                rate: '0.10%/日'
-            },
-            {
-                name: '58钱包',
-                img: 'https://img.jidaihome.com/loan/img/c62c08e4-98a2-4890-83dd-129893dd9114.png',
-                time: '7天-14天',
-                range: '1,000元-5,000元',
-                rate: '0.02%/日'
+                rate: '0.02%/日',
+                url: 'http://xiaotu.register.chanmir.com/app/B058?member_id=21#/'
             }
         ];
         $('#carouselIndicators > .carousel-indicators').append(_.template(`<%_.forEach(items, function (u,i) {%>
@@ -259,7 +215,9 @@
         <%})%>`)({ items: banners }));
         $('#carouselIndicators > .carousel-inner').append(_.template(`<%_.forEach(items, function (u,i) {%>
             <div class="carousel-item <%if (i == 0) {%>active<%}%>">
-                <img class="d-block w-100" src="<%=u.img %>">
+                <a href="<%=u.url %>">
+                    <img class="d-block w-100" src="<%=u.img %>">
+                </a>
                 <!--div class="carousel-caption d-none d-md-block">
                     <h5 class="m-0 p-0"><%=u.title %></h5>
                     <p class="m-0 p-0"><%=u.sub %></p>
